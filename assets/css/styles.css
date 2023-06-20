@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+    color: #707070;
+    font-size: 18px;
+}
+
+h1, h2, h3, h4, h5{
+  font-family: 'Times New Roman', Times, serif;
+  color: #714724;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color:#714724;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.navbarLogo{
+    width: 100px;
+    height: 100%;
+}
+
+.navigation ul{
+    list-style: none;
+}
+
+.header .navigation ul li{
+    float:left;
+    position: relative;
+}
+
+.header .navigation ul li a{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    padding: 25px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.downarrow{
+  font-size: 12px;
+}
+
+.header .navigation ul li a:hover{
+    color:#3a200a;
+    background-color: #dbc6b7;
+    height: auto;
+}
+
+.header .navigation ul li ul{
+    position: absolute;
+    right: 0;
+    width: 200px;
+    background-color:#3a200a;
+    display: none;
+}
+
+.header .navigation ul li ul li a{
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.header .navigation ul li ul li ul{
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header .navigation ul li ul li{
+    width: 100%;
+}
+
+.header .navigation ul li:hover > ul{
+    display: initial;
+}
+
+#toggle,
+.header label{
+    display: none;
+    cursor: pointer;
+}
+
+.menu{
+    width: 45px;
+    height: 35px;
+}
+
+@media(max-width:950px) {
+    .header label{
+        display: initial;
+    }
+    .header{
+        padding: 20% 10%;
+    }
+    .header .navigation{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #3a200a;
+        display: none;
+    }
+    .header .navigation ul li{
+        width: 100%;
+    }
+    .header .navigation ul li a{
+        padding: 8px 30px 8px 10%;
+    }
+    .header .navigation ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    .header .navigation ul li ul li{
+        background-color: #714724;
+
+    }
+    .header .navigation ul li ul li ul{
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+    #toggle:checked ~ .navigation{
+        display: block;
+    }
+}
+
+
+/* slider */
+
+.slider-wraper{
+  position: relative;
+  max-width: 1000%;
+  margin: 0 auto;
+}
+
+.slider{
+  display: flex;
+  aspect-ratio: 16 / 9;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slider img{
+  flex: 1 0 100%;
+  scroll-snap-align: start;
+  object-fit: cover;
+}
+
+.slider-navigation{
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left:50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.slider-navigation a{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: #dbc6b7;
+  opacity: .75;
+  transition: opacity easy 250ms;
+}
+
+.slider-navigation a:hover{
+  opacity: 100%;
+}
+
+
+
+
+
+/* footer */
+
+.appWhatsApp{
+	position: fixed;
+	right: 26px;
+	bottom: 100px;
+	width: 60px;
+	z-index: 1000;
+  }
+
+  .appWhatsApp img{
+	width: 100%;
+	height: auto;
+  }
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background: #3a200a;
+  }
+  footer .content{
+    max-width: 1350px;
+    margin: auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  footer .content p,a{
+    font-size: 14px;
+    color: #fff;
+  }
+  footer .content .box{
+    width: 33%;
+    transition: all 0.4s ease;
+  }
+  footer .content .topic{
+    font-size: 22px;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 16px;
+  }
+ .footerLogo{
+   width:100px;
+   height: 100%; 
+  }
+
+  footer .content p{
+    text-align: justify;
+  }
+  footer .content .lower .topic{
+    margin: 24px 0 5px 0;
+  }
+  footer .content .lower i{
+    padding-right: 16px;
+  }
+  footer .content .middle{
+    padding-left: 0px;
+  }
+  footer .content .middle a{
+    line-height: 32px;
+  }
+  footer .content .right input[type="text"]{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    color: #d9d9d9;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 14px;
+    border: 2px solid #222222;
+  }
+  footer .content .right input[type="submit"]{
+    height: 42px;
+    width: 100%;
+    font-size: 12px;
+    color: #d9d9d9;
+    background: #dbc6b7;
+    outline: none;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    margin-top: 12px;
+    border: 2px solid #dbc6b7;
+    transition: all 0.3s ease-in-out;
+  }
+
+  footer .content .media-icons a{
+    font-size: 20px;
+    height: 45px;
+    width: 45px;
+    display: inline-block;
+    text-align: center;
+    line-height: 43px;
+    border-radius: 5px;
+    border: 2px solid #714724;
+    margin: 30px 5px 0 0;
+    transition: all 0.3s ease;
+  }
+
+  footer a{
+    text-decoration: none;
+  }
+
+  .content .media-icons a:hover{
+    border-color: #dbc6b7;
+  }
+  footer .bottom{
+    width: 100%;
+    text-align: center;
+    color: #d9d9d9;
+    padding: 0 40px 5px 0;
+    font-size: 14px;
+    opacity: .5;
+  }
+  footer .bottom a{
+    color: #dbc6b7;
+  }
+  footer a{
+    transition: all 0.3s ease;
+  }
+  footer a:hover{
+    color: #dbc6b7;
+  }
+  @media (max-width:1100px) {
+    footer .content .middle{
+      padding-left: 50px;
+    }
+  }
+  @media (max-width:950px){
+    footer .content .box{
+      width: 50%;
+    }
+    .content .right{
+      margin-top: 40px;
+    }
+  }
+  @media (max-width:560px){
+    footer{
+      position: relative;
+    }
+    footer .content .box{
+      width: 100%;
+      margin-top: 30px;
+    }
+    footer .content .middle{
+      padding-left: 0;
+    }
+  }
