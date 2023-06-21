@@ -192,9 +192,41 @@ h1, h2, h3, h4, h5{
   opacity: 100%;
 }
 
+/* Timeline */
 
+.timeline{
+  margin: 50px;
+}
 
+.titletimeline{
+  margin-bottom: 5px;
+}
 
+.boxtimeline{
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.boxtimeline::before{
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 120%;
+  background-color: #3a200a;
+  left: -30px;
+  top: 10px;
+}
+
+.boxtimeline::after{
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #714724;
+  left: -38px;
+  top: 3px;
+}
 
 /* footer */
 
