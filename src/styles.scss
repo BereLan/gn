@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --palette-color-1: rgb(0, 0, 0);
+  --palette-color-2: rgb(255, 255, 255);
+  --palette-color-3: rgba(0, 0, 0, 0);
+  --palette-color-4: rgb(198, 156, 109);
+  --palette-color-5: rgb(166, 124, 82);
+  --palette-color-6: rgb(117, 76, 36);
+  --palette-color-7: rgb(127, 127, 127);
+  --palette-color-8: rgb(242, 174, 114);
+  --palette-color-9: rgb(76, 42, 15);
+  --palette-color-10: rgba(76, 42, 15, 0.5);
+  --palette-color-11: rgb(55, 32, 0);
+  --palette-color-12: rgb(0, 0, 255);
+  --palette-color-13: rgba(48, 48, 48, 0.9);
+  --palette-color-14: rgb(122, 70, 35);
+  --palette-color-15: rgb(146, 75, 50);
+  --palette-color-16: rgb(127, 61, 37);
+  --palette-color-17: rgba(255, 242, 243, 0.94);
+  --palette-color-18: rgb(28, 41, 59);
+  --palette-color-19: rgb(146, 169, 193);
+  --palette-color-20: rgba(255, 255, 255, 0.92);
+  --palette-color-21: rgb(233, 238, 243);
+  --palette-color-22: rgb(168, 186, 205);
+  --palette-color-23: rgb(127, 149, 171);
+
+  --palette-font-1: Times New Roman;
+  --palette-font-2: Arial;
+  --palette-font-3: Helvetica Neue;
+  --palette-font-4: Helvetica;
+  --palette-font-5: Georgia;
+  --palette-font-6: Palatino;
+  --palette-font-7: Palatino Linotype;
+  --palette-font-8: Times;
+  --palette-font-9: Crisp Noto Sans Regular;
+  --palette-font-10: Crisp Noto Sans Bold;
+}
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
